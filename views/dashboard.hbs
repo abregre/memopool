@@ -1,0 +1,38 @@
+<h5 class="font-title">Dashboard</h5>
+<h3 class="font-title">Welcome {{name}}</h3>
+<p class="font-title xl">Here are your memos</p>
+
+{{#if memos}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th class="font-title xl">Title</th>
+            <th class="font-title xl">Date</th>
+            <th class="font-title xl">Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each memos}}
+        <tr>
+            <td><a href="/memos/{{_id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt 'Do MMMM YYYY, h:mm a'}}</td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td>
+                <a href="/memos/edit/{{_id}}" class="btn btn-float orange lighten-1">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form action="/memos/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn red lighten-1" type="submit">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<h3>You don't have any memos yet.</h3>
+{{/if}}

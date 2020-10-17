@@ -1,0 +1,27 @@
+<h1 class="font-title">Public Memos</h1>
+<div class="row">
+    {{#each memos}}  
+    <div class="col s12 m4">
+        <div class="card yellow lighten-2">
+            <div class="card-image">
+             {{{editIcon user ../user _id}}}
+            </div>
+            <div class="card-content center-align ">
+                <h5 class="font-title blue-text lighten-1">{{title}}</h5>
+                <p> {{stripTags (truncate body 50)}} </p>
+                <br>
+                <div class="chip blue lighten-1 ">
+                    <img src="{{user.image}}" alt="User Image">
+                    <a href="/memos/User/{{user._id}}" class="light">{{user.displayName}}</a>
+                </div>                
+            </div>
+            <div class="card-action center-align">
+                <a href="/memos/{{_id}}" class="btn blue lighten-1 light">Read memo</a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>There are currently no memos to display</p>
+    {{/each}}  
+</div>
+

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3 class="font-title">{{memo.title}}
+            <small>{{{editIcon memo.user user memo._id false}}}</small>
+        </h3>
+        <div class="card memo yellow lighten-2">
+            <div class="card-content">
+                <span class="card-title font-title xl2">{{formatDate date 'Do MMMM YYYY, h:mm a'}}</span>
+                {{{memo.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4 center-align">
+        <div class="card center-align">
+            <div class="card-content">
+                    <span class="card-title font-title">{{memo.user.displayName}}</span>
+                <img src="{{memo.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/memos/user/{{memo.user._id}}" class="more-from-user font-title btn blue lighten-1">More memos</a>
+            </div>
+        </div>
+            <a href="/memos" class="btn red lighten-1 font-title">Go Back</a>
+    </div>
+</div>
