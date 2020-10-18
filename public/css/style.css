@@ -50,7 +50,7 @@ p{
     margin-right: 1rem;
 }
 .login-container{
-    width: 400px;
+    width: minmax(300px, 400px);
     margin-top:50px;
     text-align: center;
 }
