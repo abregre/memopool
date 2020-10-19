@@ -10,7 +10,7 @@ Create and share memo-sticks. You can login with Gmail or Github account to see 
 
 <strong>Instructions</strong><br>  
 In the config folder, change the configexample.env to config.env and enter your credentials as show in the file.
-<br>
+<br><br>
 Node Commands
 1. npm run dev => to run in development mode
 2. npm run start => to run in production mode
