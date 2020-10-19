@@ -8,6 +8,13 @@ Demo Deployment : not deployed yet
 
 Create and share memo-sticks. You can login with Gmail or Github account to see your dashboard and public memos<br>
 
+<strong>Instructions</strong><br>  
+In the config folder, change the configexample.env to config.env and enter your credentials as show in the file.
+<br>
+Node Commands
+1. npm run dev => to run in development mode
+2. npm run start => to run in production mode
+
 <strong>Vision</strong><br>  
 <ul>
   <li>More options other than public and private, so people could share "privately" memo-sticks with their team</li>
